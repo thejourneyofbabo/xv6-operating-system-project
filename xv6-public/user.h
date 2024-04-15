@@ -23,8 +23,10 @@ int getpid(void);
 char* sbrk(int);
 int sleep(int);
 int uptime(void);
+
 int myfunction(char*);
 int getgpid(void);
+int yield(void);
 
 // ulib.c
 int stat(const char*, struct stat*);
