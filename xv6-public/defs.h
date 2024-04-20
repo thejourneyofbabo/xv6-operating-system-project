@@ -186,11 +186,19 @@ void            switchkvm(void);
 int             copyout(pde_t*, uint, void*, uint);
 void            clearpteu(pde_t *pgdir, char *uva);
 
-//parc_syscall.c 
-int myfunction(char*);
-
-//pr1_syscall.c
-int getgpid();
-
 // number of elements in fixed-size array
 #define NELEM(x) (sizeof(x)/sizeof((x)[0]))
+
+
+// parc_syscall.c 
+int myfunction(char*);
+
+// pr1_syscall.c
+int getgpid();
+
+// pr2_syscall.c 
+int getlev(void);
+int setpriority(int pid, int priority);
+int setmonopoly(int pid, int password);
+void monopolize();
+void unmonopolize();
